@@ -4,7 +4,7 @@ import java.util.Scanner;
  * 
  */
 /**
- * @author Marcos
+ * @author Marcos Henrique
  *
  */
 
@@ -14,7 +14,7 @@ public class Salario {
 
             Scanner input = new Scanner(System.in);
 
-            double salario, vendas, comissao, total; //Salário, valor da comissão e total
+            double salario, vendas, comissao, total; //SalÃ¡rio, valor da comissÃ£o e total
             String name; //Nome do funcionario
 
             System.out.print("Digite o nome do trabalhador: ");
@@ -25,7 +25,7 @@ public class Salario {
 
             salario = input.nextDouble();
 
-            System.out.print("Digite o total de vendas no mês: ");
+            System.out.print("Digite o total de vendas no mÃªs: ");
 
             vendas = input.nextDouble();
 
@@ -34,9 +34,9 @@ public class Salario {
 
             total = salario + comissao;
 
-            System.out.println("O vendendor " + name + ", tem um salário fixo de R$" + salario + ".");
-            System.out.println("Com suas vendas ele ganhou R$" + comissao + " de comissão.");
-            System.out.println("No final do mês ele ganhou um total de R$" + total + " reais.");
+            System.out.println("O vendendor " + name + ", tem um salÃ¡rio fixo de R$" + salario + ".");
+            System.out.println("Com suas vendas ele ganhou R$" + comissao + " de comissÃ£o.");
+            System.out.println("No final do mÃªs ele ganhou um total de R$" + total + " reais.");
 
       }
 
