@@ -1,5 +1,5 @@
 /*
- * Tente isto 1-1
+ * Tente isto 1-2
  * Este programa converte galões em litros
  */
 package galoesparalitros;
@@ -15,14 +15,21 @@ public class GaloesParaLitros {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        double gallons; //Contém o número de galões
-        double liters; //Contpem a conversão para litros
+        double gallons, liters;
+        int counter;
         
-        gallons = 10; //Começa com 10 galões
-        
-        liters = gallons * 3.7854; //Convertendo para litros
-        
-        System.out.println(gallons + " gallons is " + liters + "liters.");
+        counter = 0;
+        for(gallons = 1; gallons <= 100; gallons++) {
+            liters = gallons * 3.7854; // Convertendo para litros
+            System.out.println(gallons + " gallons is " + liters + " liters.");
+            
+            counter++;
+            // A cada décima linha, exibe uma linha em branco
+            if(counter == 10) {
+                System.out.println();
+                counter = 0; // Zera o contador de linhas
+            }
+        }
     }
     
 }
