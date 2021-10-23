@@ -24,7 +24,7 @@ import br.com.ts.model.Cliente;
  * @date 29/09/2020
 */
 
-@RunWith(Suite.class)
+/*@RunWith(Suite.class)
 @SuiteClasses({ ClienteDAOTest.class, ProdutoDAOTest.class,
 				PedidoDAOTest.class, VendaServiceTest.class })
 
@@ -39,6 +39,7 @@ public class TestSuit {
 		
 	}
 }
+*/
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING) // Defini a ordem de execução dos testes em ordem alfabetica
 public class ClienteDAOTest {	
