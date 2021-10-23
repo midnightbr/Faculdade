@@ -1,0 +1,9 @@
+body {
+     background: url("../img/wallpaper.jpg") no-repeat;
+     background-size: cover;
+}
+
+.adicionar {
+     margin: auto;
+     float: center;
+}
