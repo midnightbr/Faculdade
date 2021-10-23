@@ -1,0 +1,67 @@
+body {
+  background-image: url("../img/background.jpg");
+  /* background-size: cover;  */
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+.div1 {
+  margin: 0px 0px 0px 410px;
+  height: 200px;
+  width: 300px;
+  float: left;
+}
+
+.div2 {
+  margin: 0px 5px;
+  height: 200px;
+  width: 300px;
+  display: inline-block;
+}
+
+.name {
+  margin: auto 12px;
+}
+
+.number {
+  margin: auto 20px;
+}
+
+.city {
+  margin: auto 3px;
+}
+
+.email {
+  margin: auto 12px;
+}
+
+.opiniao {
+  height: 150px;
+  width: 180px;
+  margin: auto 70px;
+}
+
+.botao {
+  float: right;
+  margin: auto 40px;
+  height: 40px;
+  width: 120px;
+  /*background-color: gray;
+  border-radius: 5px;
+  border: 1px solid; */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-color: red;
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 40px 40px red inset, 0 0 0 0 red;
+  -webkit-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+
+.botao:hover {
+  /* box-shadow: 0 0 40px 40px #e74c3c inset; */
+  box-shadow: 0 0 10px 0 red inset, 0 0 10px 4px red;
+}
