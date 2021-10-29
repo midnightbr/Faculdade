@@ -73,4 +73,37 @@ public class CaoDAO {
 
 	}
 	
+	public void add(Cao cao) {
+		String sql = "" + "insert into caes (cao_iden, cao_rac_iden, cao_nome, cao_sexo)" + 
+	"values (?, ?, ?, ?)";
+		
+		try {
+			PreparedStatement stm = this.connection.prepareStatement(sql);
+			stm.setInt(1, cao.getId());
+			stm.setInt(2, cao.getRaca().getId());
+			stm.setString(3, cao.getNome());
+			stm.setString(4, cao.getSexo());
+			
+			stm.executeUpdate();
+		} catch (SQLException e) {
+			// Todo auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public int deleteById(int id) {
+		String sql = "delete from caes where cao_iden = ?";
+		PreparedStatement stm;
+		
+		try {
+			stm = this.connection.prepareStatement(sql);
+			stm.setInt(1, id);
+			int qtd = stm.executeUpdate();
+			return qtd;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+	
 }

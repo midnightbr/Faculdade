@@ -14,7 +14,7 @@
 
 				<body>
 					<div class="form">
-						<form action="salvar_canino.jsp" method="post">
+						<form action="salvar_raca.jsp" method="post">
 							Id: <input type="text" name="txt_id_raca" required>
 							Nome: <input type="text" name="txt_nome_raca" required>
 							<button type="submit" value="submit">Inserir Raça</button>

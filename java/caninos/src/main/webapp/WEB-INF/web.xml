@@ -19,4 +19,14 @@
     <servlet-name>Caes</servlet-name>
     <url-pattern>/Caes</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CaninoController</display-name>
+    <servlet-name>CaninoController</servlet-name>
+    <servlet-class>controller.CaninoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CaninoController</servlet-name>
+    <url-pattern>/CaninoController</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -47,29 +47,29 @@ public class RacaDAO {
 		return raca;
 	}
 
-	public String inserirRaca(String id_raca, String nome_raca) throws SQLException, ClassNotFoundException {
+	public void inserirRaca(Raca raca) {
 		
-		Raca raca = new Raca();
-		String res;
+		// Raca raca = new Raca();
+		// String res;
 		
 		try {
 //			String sql = "INSERT INTO raca VALUES (DEFAULT, ?)";
 			PreparedStatement stm = connection.prepareStatement("INSERT INTO racas VALUES (?, ?)");
 //			stm.setInt(1, raca.getId());
 //			stm.setString(2, raca.getNome());
-			int raca_id = Integer.parseInt(id_raca);
-			stm.setInt(1, raca_id);
-			stm.setString(2, nome_raca);
+//			int raca_id = Integer.parseInt(id_raca);
+			stm.setInt(1, raca.getId());
+			stm.setString(2, raca.getNome());
 			stm.executeUpdate();
 			
-			res = "Raça cadastada com sucesso";
+			// res = "Raça cadastada com sucesso";
 		} catch (SQLException e) {
 			e.printStackTrace();
-			res = "Não foi possivel cadastrar a raça. Erro: " + e;
+			// res = "Não foi possivel cadastrar a raça. Erro: " + e;
 			
 		}
 		
-		return res;
+		// return res;
 	}
 	
 	public String alterarRaca(String id_raca, String nome_raca) throws SQLException, ClassNotFoundException {
@@ -150,4 +150,40 @@ public class RacaDAO {
 		
 		return racas;
 	}
+
+	public int deleteById(int id_raca) {
+		String sql = "delete from raca where id_raca = ?";
+		PreparedStatement stm;
+		
+		try {
+			stm = this.connection.prepareStatement(sql);
+			stm.setInt(1, id_raca);
+			
+			int qtd = stm.executeUpdate();
+			
+			return qtd;
+		} catch(SQLException e) {
+			e.printStackTrace();
+			return 0;
+		}
+	}
+
+	public void alterarById(Raca alterarRaca) {
+		String sql = "update raca set rac_nome = ? where rac_id = ?";
+		PreparedStatement stm;
+		
+		try {
+			stm = this.connection.prepareStatement(sql);
+			stm.setString(1, alterarRaca.getNome());
+			stm.setInt(2, alterarRaca.getId());
+			
+			stm.executeUpdate();
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+			
+		}
+		
+	}
+	
 }

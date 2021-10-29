@@ -1,6 +1,15 @@
 body {
      background: url("../img/wallpaper.jpg") no-repeat;
      background-size: cover;
+     background-attachment: fixed;
+     display: flex;
+     align-items: center;
+}
+
+div.lista {
+     position: relative;
+     height: auto;
+     weight: 400px;
 }
 
 .adicionar {
