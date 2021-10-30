@@ -19,8 +19,9 @@ public class ConnectionFactory {
 		String password = "beta2209";
 		
 		try {
+			Class.forName("org.postgresql.Driver");
 			return DriverManager.getConnection(url, user, password);
-		} catch (SQLException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			// Todo Auto-generated catch block
 			e.printStackTrace();
 			return null;

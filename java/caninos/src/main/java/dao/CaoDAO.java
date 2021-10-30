@@ -91,19 +91,22 @@ public class CaoDAO {
 		}
 	}
 
-	public int deleteById(int id) {
+	public int deleteById(int id_cao) {
 		String sql = "delete from caes where cao_iden = ?";
 		PreparedStatement stm;
 		
 		try {
 			stm = this.connection.prepareStatement(sql);
-			stm.setInt(1, id);
+			stm.setInt(1, id_cao);
+			
 			int qtd = stm.executeUpdate();
+			
 			return qtd;
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return 0;
 		}
+		
 	}
 	
 }

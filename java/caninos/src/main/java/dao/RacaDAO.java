@@ -152,7 +152,7 @@ public class RacaDAO {
 	}
 
 	public int deleteById(int id_raca) {
-		String sql = "delete from raca where id_raca = ?";
+		String sql = "delete from racas where rac_iden = ?";
 		PreparedStatement stm;
 		
 		try {
@@ -169,7 +169,7 @@ public class RacaDAO {
 	}
 
 	public void alterarById(Raca alterarRaca) {
-		String sql = "update raca set rac_nome = ? where rac_id = ?";
+		String sql = "update racas set rac_nome = ? where rac_iden = ?";
 		PreparedStatement stm;
 		
 		try {

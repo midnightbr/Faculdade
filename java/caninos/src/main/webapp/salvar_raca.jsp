@@ -17,7 +17,7 @@
 		String id_raca = request.getParameter("txt_id_raca");
 		String nome_raca = request.getParameter("txt_nome_raca");
 		
-		out.print(racaDao.inserirRaca(id_raca, nome_raca));
+		//out.print(racaDao.inserirRaca(id_raca, nome_raca));
 		//racaDao.inserirRaca(id_raca, nome_raca);
 		
 	%>

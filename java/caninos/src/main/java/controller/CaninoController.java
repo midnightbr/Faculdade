@@ -96,10 +96,14 @@ public class CaninoController extends HttpServlet {
 			
 		case "DELETE_CAO":
 			// Pegando a ID do dog para excluir
-			int id = Integer.parseInt(request.getParameter("id"));
+			id_cao = Integer.parseInt(request.getParameter("id_cao"));
 			
 			// Excluindo o dog
-			int qtdExcluidos = caoDao.deleteById(id);
+			int qtdExcluidos = caoDao.deleteById(id_cao);
+			
+			jsonCao = gson.toJson(qtdExcluidos);
+			mensagem = "Dog excluido com sucesso!";
+			jsonMensagem = "{" + "\"mesagem\":\"" + mensagem + "\"" + "}"; 
 			
 			out.println("{" + "\"mensagem\":\"" + qtdExcluidos + " registro(s) excluídos(s)" + "\"" + "}");
 			
@@ -139,7 +143,7 @@ public class CaninoController extends HttpServlet {
 		case "ALTER_RACA":
 			id_raca = Integer.parseInt(request.getParameter("id_raca"));
 //			String raca_id = request.getParameter("id_raca");
-			String rac_nome = request.getParameter("new_nome_raca");
+			String rac_nome = request.getParameter("rac_nome");
 			
 			Raca alterarRaca = new Raca();
 			
