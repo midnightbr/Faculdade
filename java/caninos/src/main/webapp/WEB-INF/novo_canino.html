@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cadastrar um Novo Canino</title>
+     <script type="text/javascript" src="js/novo_canino.js"></script>
+     <script type="text/javascript" src="js/node_modules/jquery/dist/jquery.min.js"></script>
+</head>
+
+<body>
+     <h1>Cadastrar Novo Canino</h1>
+
+     <fieldset>
+          <legend>Dados do canino</legend>
+
+          <label for="txt_id_cao">ID</label>
+          <input id="txt_id_cao" name="txt_id_cao" type="text" value=""> <br />
+
+          <label for="txt_nome_cao">Nome</label>
+          <input id="txt_nome_cao" name="txt_nome_cao" type="text" value=""> <br />
+
+          <label for="sel_sexo_cao">Sexo</label>
+          <select id="sel_sexo_cao" name="sel_sexo_cao">
+               <option value="F">Fêmea</option>
+               <option value="M">Macho</option>
+          </select> <br />
+
+          <label for="sel_raca">Raça</label><br />
+          <select id="sel_raca" name="sel_raca">
+               <option selected="selected" value="0">Selecione a Raça</option>
+          </select><br />
+
+          <br />
+          <button id="btn_add_cao">Adicionar o Canino</button>
+     </fieldset>
+
+     <hr>
+
+     <h1>Cães já cadastrados</h1>
+
+     <div id="divMensagem" style="color: red" ;>
+
+     </div>
+
+     <hr>
+
+     <div id="divListagemCaes">
+
+     </div>
+</body>
+
+</html>
