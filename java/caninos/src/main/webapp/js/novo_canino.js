@@ -7,7 +7,7 @@ $(document).ready(function () {
                var caes = data;
                var objCaes = JSON.parse(caes);
                for (i = 0; i < objCaes.length; i++) {
-                    $("divListagemCaes").append(objCaes[i].id + " - " + objCaes[i].nome + " (" + objCaes[i].raca.nome + ")" + "<br>");
+                    $("#divListagemCaes").append(objCaes[i].id + " - " + objCaes[i].nome + " (" + objCaes[i].raca.nome + ")" + "<br>");
                };
           });
      $.get("CaninoController",
