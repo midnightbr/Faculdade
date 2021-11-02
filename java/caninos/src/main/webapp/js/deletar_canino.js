@@ -1,5 +1,5 @@
 $(document).ready(function () {
-     $.get("CaninoController",
+	$.get("CaninoController",
           {
                acao: "GET_CAES"
           },
@@ -9,30 +9,13 @@ $(document).ready(function () {
                for (i = 0; i < objCaes.length; i++) {
                     $("#divListagemCaes").append(objCaes[i].id + " - " + objCaes[i].nome + " (" + objCaes[i].raca.nome + ")" + "<br>");
                };
-          });
-     $.get("CaninoController",
-          {
-               acao: "GET_RACAS"
-          },
-          function (data) {
-               var racas = data;
-               var objRacas = JSON.parse(racas);
-               for (i = 0; i < objRacas.length; i++) {
-                    $("#sel_raca").append("<option value=" + objRacas[i].id + ">" + objRacas[i].nome + "</option>")
-               }
-          });
-     $("#btn_add_cao").click(function () {
+        });
+	$("#btn_del_cao").click(function () {
           txtId = $("#txt_id_cao").val();
-          txtNome = $("#txt_nome_cao").val();
-          selSexo = $("#sel_sexo_cao").val();
-          selRaca = $("#sel_raca").val();
           $.post("CaninoController",
                {
-                    acao: "INSERT_CAO",
-                    id: txtId,
-                    nome: txtNome,
-                    sexo: selSexo,
-                    raca: selRaca
+                    acao: "DELETE_CAO",
+                    id_cao: txtId
                },
                function (data) {
                     var cao = data;
