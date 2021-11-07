@@ -31,7 +31,7 @@ $(document).ready(function () {
                               var objCaes = JSON.parse(caes);
                               $("#divListagemCaes").html("");
                               for (i = 0; i < objCaes.length; i++) {
-                                   $("divListagemCaes").append(objCaes[i] + " - " + objCaes[i].nome + " (" + objCaes[i].raca.nome + ")" + "<br>");
+                                   $("#divListagemCaes").append(objCaes[i] + " - " + objCaes[i].nome + " (" + objCaes[i].raca.nome + ")" + "<br>");
                               };
                          });
                });
