@@ -29,4 +29,14 @@
     <servlet-name>CaninoController</servlet-name>
     <url-pattern>/CaninoController</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RacaController</display-name>
+    <servlet-name>RacaController</servlet-name>
+    <servlet-class>controller.RacaController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RacaController</servlet-name>
+    <url-pattern>/RacaController</url-pattern>
+  </servlet-mapping>
 </web-app>
