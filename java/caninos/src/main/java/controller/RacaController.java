@@ -73,7 +73,7 @@ public class RacaController extends jakarta.servlet.http.HttpServlet {
 		String mensagem = "Raça excluida com sucesso!";
 		String jsonMensagem = "{" + "\"mensagem\":\"" + mensagem + "\"" + "}";
 		
-		out.println("[" + sJson + "," + jsonMensagem + "]0");
+		out.println("[" + sJson + ", " + jsonMensagem + "]");
 	}
 	
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
