@@ -1,0 +1,16 @@
+D:\GitHub\Faculdade\SocketTcp\Client\bin\Debug\net5.0\Client.exe
+D:\GitHub\Faculdade\SocketTcp\Client\bin\Debug\net5.0\Client.deps.json
+D:\GitHub\Faculdade\SocketTcp\Client\bin\Debug\net5.0\Client.runtimeconfig.json
+D:\GitHub\Faculdade\SocketTcp\Client\bin\Debug\net5.0\Client.runtimeconfig.dev.json
+D:\GitHub\Faculdade\SocketTcp\Client\bin\Debug\net5.0\Client.dll
+D:\GitHub\Faculdade\SocketTcp\Client\bin\Debug\net5.0\Client.pdb
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\Client.csproj.AssemblyReference.cache
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\Client.AssemblyInfoInputs.cache
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\Client.AssemblyInfo.cs
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\Client.csproj.CoreCompileInputs.cache
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\Client.dll
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\refint\Client.dll
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\Client.pdb
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\Client.genruntimeconfig.cache
+D:\GitHub\Faculdade\SocketTcp\Client\obj\Debug\net5.0\ref\Client.dll
