@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "tjTEEp1SVfxg1y2KT92N3/BhgXcvcdXBkdNFu27ir+cpVASQ5UbsF5WWtXBQiTtFO5iUfDvOCBNgmtEGbpthiQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marco\\Documents\\GitHub\\Faculdade\\Caninos\\GarantirExistenciaBd\\GarantirExistenciaBd.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marco\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
+    "C:\\Users\\marco\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
