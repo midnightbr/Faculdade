@@ -44,14 +44,9 @@ namespace Caninos.Controllers
                     common.ListDogs = await dogs.ToListAsync();
                 }
             }
-
+            
             common.ListBreeds = _breedService.GetAll();
             return View(common);
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

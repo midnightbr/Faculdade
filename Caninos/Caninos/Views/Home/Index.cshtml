@@ -1,5 +1,4 @@
-﻿@model Common;
-@{
+﻿@{
     ViewData["Title"] = "Home";
 }
 
@@ -10,86 +9,4 @@
     </p>
 </div>
 
-<br/>
-<br/>
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-6">
-            <a class="btnmanual btn btn-outline-primary" asp-controller="Dogs" asp-action="Create">Adicionar Cachorro</a>
-
-            <h5>Lista de Cachorros</h5>
-            <div>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Sexo</th>
-                        <th scope="col">Raça</th>
-                    </tr>
-                    </thead>
-                    <tbody id="tableDogs">
-                    @if (Model.ListDogs.Any())
-                    {
-                        foreach (var dog in Model.ListDogs)
-                        {
-                            <tr>
-                                <th scope="row">@dog.Id</th>
-                                <td>@dog.Name</td>
-                                <td>@dog.Sexo</td>
-                                <td>@dog.Breed.Name</td>
-                                <td>
-                                    <a class="btn btn-outline-secondary" asp-action="" asp-route-id="@dog.Id">Editar</a>
-                                    <a class="btn btn-outline-danger" asp-action="" asp-route-id="@dog.Id">Deletar</a>
-                                </td>
-                            </tr>
-                        }
-                    }
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <div class="col"></div>
-
-        <div class="col-sm-4">
-            <a class="btnmanual btn btn-outline-primary" asp-controller="Breeds" asp-action="Create">Adicionar Raça</a>
-            
-            <h5>Lista de Raças</h5>
-            <div>
-                <table class="table">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                    </tr>
-                    </thead>
-                    <tbody id="tableBreeds">
-                    @if (Model.ListBreeds.Any())
-                    {
-                        foreach (var breed in Model.ListBreeds)
-                        {
-                            <tr>
-                                <th scope="row">@breed.Id</th>
-                                <td>@breed.Name</td>
-                                <td>
-                                    <a class="btn btn-outline-secondary" asp-action="" asp-route-id="@breed.Id">Editar</a>
-                                    <a class="btn btn-outline-danger" asp-action="" asp-route-id="@breed.Id">Deletar</a>
-                                </td>
-                            </tr>
-                        }
-                    }
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
-@section Scripts
-{
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
-}
+<partial name="/Views/Home/ListDogsBreeds.cshtml"/>
