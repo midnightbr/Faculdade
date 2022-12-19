@@ -1,10 +1,10 @@
 ﻿@model Caninos.Models.Dog
 
-<h4>Dog</h4>
+<h4>Cachorro</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreatePartitial">
+        <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -13,8 +13,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="Sexo" class="control-label"></label>
-                <input asp-for="Sexo" class="form-control" />
-                <span asp-validation-for="Sexo" class="text-danger"></span>
+                <select asp-for="Sexo" class="form-control">
+                    <option value="Macho">Macho</option>
+                    <option value="Femia">Femia</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="BreedId" class="control-label"></label>
@@ -23,14 +25,13 @@
             
             <br/>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <div class="row-cols-3">
+                    <input type="submit" value="Adicionar" class="btn btn-outline-primary col-4 m-lg-2"/>
+                    <a class="btn btn-danger col-6 m-lg-4" asp-controller="Home" asp-action="Index">Cancelar</a>
+                </div>
             </div>
         </form>
     </div>
-</div>
-<br/>
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

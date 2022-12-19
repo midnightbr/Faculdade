@@ -1,12 +1,12 @@
 ﻿@model Caninos.Models.Breed
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Adicionar";
 }
 
-<h1>Create</h1>
+<h1>Adicionar</h1>
 
-<h4>Breed</h4>
+<h4>Raça</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -19,14 +19,13 @@
             </div>
             <br/>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <div class="row-cols-3">
+                    <input type="submit" value="Adicionar" class="btn btn-outline-primary col-4 m-lg-2"/>
+                    <a class="btnmanual btn btn-danger col-6 m-lg-4" asp-controller="Home" asp-action="Index">Voltar a lista</a>
+                </div>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a class="btnmanual btn btn-outline-danger" asp-controller="Home" asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

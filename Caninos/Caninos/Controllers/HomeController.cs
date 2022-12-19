@@ -16,6 +16,7 @@ namespace Caninos.Controllers
 
         public HomeController(DataContext context, IDogService dogService, IBreedService breedService, ILogger<HomeController> logger)
         {
+            _context = context;
             _logger = logger;
             _dogService = dogService;
             _breedService = breedService;

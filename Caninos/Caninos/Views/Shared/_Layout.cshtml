@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -30,26 +30,26 @@
                     </li>
                 </ul>
             </div>*@
-                <form asp-controller="Dogs" asp-action="Index">
+                <form asp-controller="Home" asp-action="Index">
                     <select name="column">
                         <option value="Dog">Cachorros</option>
                         <option value="Breed">Raça</option>
                     </select>
-                    <input type="text" name="Name" />
+                    <input type="text" name="search" />
                     <input type="submit" value="Buscar" />
                 </form>
         </div>
     </nav>
 </header>
 <div class="container">
-    <main role="main" class="pb-3">
+    <main role="main" class="pb-1">
         @RenderBody()
     </main>
 </div>
 
 <footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2022 - Caninos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <div class="container align-items-center">
+            &copy; 2022 - Caninos - <a href="https://github.com/midnightbr/Faculdade/tree/main/Caninos">Marcos Henrique</a>
     </div>
 </footer>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>

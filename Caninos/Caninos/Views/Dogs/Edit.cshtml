@@ -20,24 +20,27 @@
             </div>
             <div class="form-group">
                 <label asp-for="Sexo" class="control-label"></label>
-                <select asp-for="Sexo" class="form-control"></select>
-                <span asp-validation-for="Sexo" class="text-danger"></span>
+                <select asp-for="Sexo" class="form-control">
+                    <option value="Macho">Macho</option>
+                    <option value="Femia">Femia</option>
+                </select>
             </div>
             <div class="form-group">
                 <label asp-for="BreedId" class="control-label"></label>
                 <select asp-for="BreedId" class="form-control" asp-items="ViewBag.BreedId"></select>
                 <span asp-validation-for="BreedId" class="text-danger"></span>
             </div>
+            <br/>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <div class="row-cols-3">
+                    <input type="submit" value="Save" class="btn btn-outline-primary col-4 m-lg-2"/>
+                    <a class="btn btn-danger col-6 m-lg-4" asp-controller="Home" asp-action="Index">Cancelar</a>
+                </div>
             </div>
         </form>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+<br/>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

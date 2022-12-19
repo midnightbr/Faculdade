@@ -20,9 +20,9 @@ namespace Caninos.Controllers
         }
 
         // GET: Breeds
-        public async Task<IActionResult> Index()
+        public async Task<List<Breed>> Index()
         {
-              return View(await _context.Breeds.ToListAsync());
+              return await _context.Breeds.ToListAsync();
         }
 
         // GET: Breeds/Details/5
@@ -111,7 +111,7 @@ namespace Caninos.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToRoute(new { controller = "Home", action = "Index" });
             }
             return View(breed);
         }
@@ -150,7 +150,7 @@ namespace Caninos.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
         }
 
         private bool BreedExists(int id)

@@ -20,10 +20,10 @@ namespace Caninos.Controllers
         }
 
         // GET: Dogs
-        public async Task<IActionResult> Index()
+        public async Task<List<Dog>> Index()
         {
             var dataContext = _context.Dogs.Include(d => d.Breed);
-            return View(await dataContext.ToListAsync());
+            return await dataContext.ToListAsync();
         }
 
         // GET: Dogs/Details/5
@@ -59,7 +59,12 @@ namespace Caninos.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Sexo,BreedId")] Dog dog)
         {
-            if (ModelState.IsValid)
+            bool valido = false;
+
+            if (!string.IsNullOrWhiteSpace(dog.Name) && !string.IsNullOrWhiteSpace(dog.Sexo) && dog.BreedId != 0)
+                valido = true;
+
+            if (valido)
             {
                 _context.Add(dog);
                 await _context.SaveChangesAsync();
@@ -116,7 +121,7 @@ namespace Caninos.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToRoute(new { controller = "Home", action = "Index" });
             }
             ViewData["BreedId"] = new SelectList(_context.Breeds, "Id", "Name", dog.BreedId);
             return View(dog);
@@ -157,7 +162,7 @@ namespace Caninos.Controllers
             }
             
             await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            return RedirectToRoute(new { controller = "Home", action = "Index" });
         }
 
         private bool DogExists(int id)

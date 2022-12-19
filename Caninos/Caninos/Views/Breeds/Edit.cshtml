@@ -18,15 +18,15 @@
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
+            <br/>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <div class="row-cols-3">
+                    <input type="submit" value="Save" class="btn btn-primary col-4 m-lg-2"/>
+                    <a class="btn btn-danger col-6 m-lg-4" asp-controller="Home" asp-action="Index">Voltar a Lista</a>
+                </div>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

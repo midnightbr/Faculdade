@@ -2,11 +2,31 @@
     ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <p>
-        Projeto feito para as avaliações das materias:<br/>
-        Tópicos Integradores - Analista de Software e Infraestrutura de TI e Tópicos Integradores - Analista de Redes de Computadores
-    </p>
-</div>
+<section>
+    <div id="background" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item carousel-image bg-img-1 active">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h5>Projeto feito para as avaliações das materias:</h5>
+                    <p>Tópicos Integradores - Analista de Software e Infraestrutura de TI e Tópicos Integradores - Analista de Redes de Computadores</p>
+                </div>
+            </div>
+            <div class="carousel-item carousel-image bg-img-2">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h5>Projeto feito para as avaliações das materias:</h5>
+                    <p>Tópicos Integradores - Analista de Software e Infraestrutura de TI e Tópicos Integradores - Analista de Redes de Computadores</p>
+                </div>
+            </div>
+            <div class="carousel-item carousel-image bg-img-3">
+                <div class="carousel-caption d-none d-md-block text-white">
+                    <h5>Projeto feito para as avaliações das materias:</h5>
+                    <p>Tópicos Integradores - Analista de Software e Infraestrutura de TI e Tópicos Integradores - Analista de Redes de Computadores</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <partial name="/Views/Lista/ListDogsBreeds.cshtml"/>
+    </div>
+</section>
 
-<partial name="/Views/Home/ListDogsBreeds.cshtml"/>
